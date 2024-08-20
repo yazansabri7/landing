@@ -1,1 +1,52 @@
-@import '../css/base.css';
+@import url('./base.css');
+body{
+    font-family: var(--mainfont);
+    background-color: #eee;
+}
+.header{
+    background-color: #fff;
+    padding: 20px 0;
+}
+.header .logo{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+.logo img{
+    width: 35px;
+}
+.logo a{
+    color: var(--maincolor);
+}
+.header .nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+.nav ul li a{
+    color: #101928;
+}
+.active{
+    font-weight: 700;
+}
+.auth{
+    display: flex;
+    gap: 15px;
+}
+ .auth a{
+    border: solid 2px var(--maincolor);
+    padding: 5px 40px;
+    border-radius: 10px;
+    font-weight:700;
+    font-family: var(--subfont);
+    
+    
+}
+.auth .login{
+    color: var(--maincolor);
+}
+.auth .register{
+    color: #fff;
+    background-color: var(--maincolor);
+}
