@@ -9,8 +9,8 @@ body{
 }
 .header .logo{
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
+    align-items: center;
     gap: 2px;
 }
 .logo img{
@@ -19,7 +19,7 @@ body{
 .logo a{
     color: var(--maincolor);
 }
-.header .nav ul{
+ .nav ul{
     display: flex;
     flex-wrap: wrap;
     gap: 22px;
@@ -49,4 +49,17 @@ body{
 .auth .register{
     color: #fff;
     background-color: var(--maincolor);
+}
+.menu{
+    display: none;
+}
+/* media header*/
+@media screen and (max-width:992px) {
+    .nav{
+        display: none;
+    }
+    .menu{
+        display: block;
+        order: 1;
+    }
 }
