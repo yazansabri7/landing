@@ -3,6 +3,7 @@ body{
     font-family: var(--mainfont);
     background-color: #eee;
 }
+/* start header */
 .header{
     background-color: #fff;
     padding: 20px 0;
@@ -13,18 +14,18 @@ body{
     align-items: center;
     gap: 2px;
 }
-.logo img{
+.header .logo img{
     width: 35px;
 }
-.logo a{
+.header .logo a{
     color: var(--maincolor);
 }
- .nav ul{
+.navbar ul{
     display: flex;
     flex-wrap: wrap;
     gap: 22px;
 }
-.nav ul li a{
+.navbar ul li a{
     color: #101928;
 }
 .active{
@@ -34,7 +35,7 @@ body{
     display: flex;
     gap: 15px;
 }
- .auth a{
+.auth a{
     border: solid 2px var(--maincolor);
     padding: 5px 40px;
     border-radius: 10px;
@@ -53,13 +54,120 @@ body{
 .menu{
     display: none;
 }
+/* end header */
+
 /* media header*/
 @media screen and (max-width:992px) {
-    .nav{
+    .navbar,
+    .auth{
         display: none;
     }
     .menu{
         display: block;
-        order: 1;
+        
     }
+    
+}
+@media  screen and (max-width:576px){
+    .container{
+        width: calc(100% - 50px);
+       
+    }
+    .header .logo img{
+        width: 20px;
+    }
+    .header .logo a{
+        font-size: 14px;
+    }
+    
+}
+/* start footer */
+.footer{
+    background-color: #393E46;
+    color: #fff;
+    padding: 50px 0;
+}
+.footer a{
+    color: #fff;
+    
+}
+.footer-start{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 518px;
+    flex-wrap: wrap;
+}
+.footer-start .logo{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    align-items: center;
+
+}
+.footer-start .logo img{
+    width: 35px;
+}
+
+.footer-start .icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+}
+
+.footer-start .icons  img{
+    border: 1px solid #fff;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+}
+.footer-end{
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.footer-end .nav{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.footer-end .footer-item{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+}
+/* end footer */
+
+/* media footer */
+@media  screen and (max-width:1200px){
+    .footer-start{
+        width: 100%;
+    }
+    .footer-end{
+        width: 100%;
+    }
+    .footer .row{
+        gap: 15px;
+    }
+    
+}
+@media  screen and (max-width:768px){
+    .footer-end .footer-item{
+        width: calc(50% - 20px);
+    }
+    .footer-end{
+        gap: 20px;
+    }
+   
+}
+@media  screen and (max-width:400px){
+   .footer-end .footer-item{
+    width: 100%;
+    text-align: center;
+   }
+   
 }
