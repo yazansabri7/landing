@@ -1,13 +1,18 @@
 @import url('./base.css');
 body{
     font-family: var(--mainfont);
-    background-color: #eee;
+    background-color: #fff;
+    
 }
 /* start header */
 .header{
+    width: 100%;
     background-color: #fff;
-    padding: 20px 0;
+    padding: 30px 0;
+    box-shadow: 0px 8px 8px rgba(0,0,0,0.1);
+    
 }
+
 .header .logo{
     display: flex;
     flex-wrap: wrap;
@@ -63,8 +68,7 @@ body{
         display: none;
     }
     .menu{
-        display: block;
-        
+        display: block; 
     }
     
 }
@@ -81,6 +85,578 @@ body{
     }
     
 }
+/* end maedia header*/
+
+
+/* start begins*/
+.begins{
+    padding: 30px 0;
+}
+.begins .row{
+    gap:10px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+
+.begins .choose-course{
+    width: calc(60% - 10px );
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    
+}
+.choose-course span{
+    color: var(--maincolor);
+    
+}
+.choose-course span span{
+    font-weight: 700;
+}
+.choose-course h1{
+    font-size: 45px;
+}
+.choose-course h1 span {
+    color: var(--maincolor);
+}
+.choose-course p{
+    color: #969696;
+    
+}
+.choose-course .auther{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.auth-register a{
+    background-color: var(--maincolor);
+    color: #fff;
+    border: solid 2px var(--maincolor);
+    padding: 5px 40px;
+    border-radius: 10px;
+    font-weight:700;
+    font-family: var(--subfont);
+}
+.auth-vedio{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+.auth-vedio img{
+    background-color: #F0C932;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    padding: 10px;
+    
+}
+.auth-vedio a{
+    font-weight: 600;
+    color: #000;
+}
+.choose-course .auther a:nth-child(2)
+{
+    border: none;
+    color: #000;
+
+}
+ .begins .student{
+    width: calc(40% - 10px);
+}
+.begins .student  img{
+    width:100%;
+    height: 100%;
+   
+}
+.auth-vedio{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* end bigins*/
+
+
+/* media begins*/
+@media  screen and (max-width:770px){
+   .begins .row{
+        gap: 50px;
+   }
+   .begins .choose-course{
+        width: 100%;
+   }
+   .begins .student{
+        width: 60%;
+   }
+
+    
+}
+@media  screen and (max-width:500px){
+   .begins .container{
+    width: 90%;
+    margin: auto;
+
+   }
+   .choose-course .auther{
+    justify-content: center;
+   }
+   .begins .choose-course{
+    text-align: center;
+   }
+
+    
+}
+@media  screen and (max-width:400px){
+    .begins .student  img{
+        display: none;
+    }
+    .choose-course .auther{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .auth-vedio img{
+        width: 10px;
+        height: 10px;
+        padding: 8px;
+    }
+}
+/* end media begins*/
+
+/* start course*/
+.courses{
+    padding: 50px 0;
+    
+}
+.courses .row{
+    padding: 5px;
+    justify-content: flex-start;
+
+}
+
+.courses-items{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    width: calc(60% - 20px);
+    
+}
+.course{
+    
+    color: #fff;
+    
+    box-shadow: 0px 8px 8px rgba(0,0,0,0.1);
+    width: calc(40% - 20px);
+    
+        
+}
+.course-card{
+    position: relative;
+    width: calc(100%);
+    
+}
+.course-info span:first-of-type{
+    background-color: var(--maincolor);
+    padding: 4px;
+    font-family: var(--mainfont);
+    font-weight: 500;
+    border-radius: 5px;
+
+}
+.course-info  span:last-of-type{
+    padding-right: 10px;
+    font-weight: 700;
+
+}
+
+.course-info{
+    position: absolute;
+    top: 0;
+    right:0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:20px 0;
+    align-items: flex-start;
+
+}
+.course-info span:last-of-type{
+    align-self: flex-end;
+}
+.course img{
+    width: calc(100%);
+    filter: brightness(50%);
+}
+.course-details{
+    color: #000;
+    padding: 10px;
+}
+.course-details .qq{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.course-details .row:nth-child(2){
+    justify-content: flex-start;
+    gap: 13px;
+    color: #969696;
+}
+
+.course-descreption{
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: calc(35% - 20px);
+    gap: 60px;
+    align-self: flex-start;
+    
+    
+}
+.course-descreption p:first-child{
+    color: var(--maincolor);
+}
+.course-descreption p{
+    color: #969696;
+}
+.course-descreption .row h2{
+    font-size:33px;
+}
+.course-descreption a{
+    background-color: var(--maincolor);
+    opacity: 0.9;
+    width: 135px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 17px;
+    color:#fff;
+    font-weight: 600;
+}
+/* end course */
+
+/* media course*/
+@media  screen and (max-width:1430px){
+   .courses-items{
+    width: calc(85%);
+   }
+    .courses .row{
+        gap: 60px;
+    }
+}
+@media  screen and (max-width:1181px){
+   .courses-items{
+    width: calc(100%);
+   }
+}
+@media  screen and (max-width:1000px){
+    .courses-items{
+        justify-content: center;
+    }
+   .course{
+    width: calc(70%);
+    display: flex;
+    flex-direction: column;
+   }
+   .course-descreption{
+    width: calc(100%);
+    gap: 25px;
+    align-items: center;
+   }
+   .course-descreption p{
+    text-align: center;
+   }
+}
+@media  screen and (max-width:780px){
+   .course{
+    width: calc(100%);
+   }
+   
+}
+@media  screen and (max-width:400px){
+   .courses .container{
+    width: 99%;
+    margin: auto;
+   }
+   .course-descreption{
+    margin: auto;
+    text-align: center;
+   }
+   .course-descreption a{
+    margin: auto;
+   }
+}
+@media  screen and (max-width:350px){
+   .course-details .row h2{
+        font-size: 19px;
+   }
+}
+
+/* end media course*/
+
+/* start interface*/
+.interfaces{
+    padding: 80px 0;
+}
+.interfaces .what-give{
+    width:calc(25% - 20px) ;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+.interfaces .what-give span{
+    color: var(--maincolor);
+}
+.interfaces .what-give p{
+    color:#969696;
+}
+.interfaces .interface{
+    width: calc(75% - 20px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.interface .interface-section{
+    width: calc((75% - 20px) / 4);
+}
+.interface-section{
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--maincolor);
+    padding: 30px 25px;
+    border-radius: 4px;
+}
+.interface-section p{
+    color: #DDDDDD;
+}
+
+.interface-section img{
+    
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/* end interface*/
+
+/* media interface*/
+
+@media  screen and (max-width:1430px){
+    .interfaces .what-give{
+        width: calc((100% - 20px));
+    }
+    .interfaces .interface{
+        width: calc((100% - 20px));
+    }
+    .interfaces .row{
+        gap: 55px;
+    }
+   
+}
+@media  screen and (max-width:1100px){
+    .interfaces .interface{
+        width: calc(100%);
+    }
+    .interfaces .interface-section{
+        width: calc(100% / 3);
+    }
+
+}
+@media  screen and (max-width:550px){
+    .interfaces .interface-section {
+        width: calc(100%);
+    }
+
+}
+@media  screen and (max-width:400px){
+    .interfaces .what-give{
+        text-align: center;
+    }
+    .interfaces .container{
+        width: 95%;
+    }
+
+}
+
+
+/* end media interface*/
+
+/* start selected-course*/
+
+.selected-course{
+    background-color: var(--maincolor);
+    padding: 40px 0;
+}
+.selected-course .row{
+    justify-content: space-evenly;
+}
+.student-study{
+    width: calc(40% - 30px);
+}
+.student-study img{
+    width: 60%;
+}
+.number-of-people{
+    color: #fff;
+    width: calc(60% - 30px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 45px;
+}
+.number-of-people span:first-child{
+    color:#F0C932;
+}
+.number-of-people p{
+    color: #DDDDDD;
+}
+.statistics{
+    display: flex;
+    flex-wrap: wrap;
+    gap:80px;
+    
+}
+.statistics-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.statistics-section span:first-child{
+    font-weight: 500;
+}
+.statistics-section span:last-child{
+    color: #DDDDDD;
+}
+
+
+/* end selected-course*/
+
+/* media selected-course*/
+@media  screen and (max-width:990px){
+    .student-study{
+        width: calc(100%);
+        text-align: center;
+    }
+    .number-of-people{
+        width: calc(100%);
+    }
+   
+}
+@media  screen and (max-width:470px){
+    .number-of-people{
+        text-align: center;
+    }
+    .statistics{
+        gap: 80px;
+    }
+   
+}
+@media  screen and (max-width:416px){
+    .selected-course .container{
+        width: 95%;
+    }
+    .statistics{
+        gap: 60px;
+    }
+    .statistics-section{
+        width: 20%;
+    }
+   
+}
+
+/* end media selected-course */
+
+
+/*  start testimonial section*/
+.testimonials{
+    padding: 50px 0;
+    background-color: #fff;
+
+}
+.title{
+    text-align: center;
+    padding-bottom: 20px;
+
+    
+}
+.qq span{
+    color: var(--maincolor);
+}
+.testimonials .row{
+    gap: 40px;
+}
+.testimonial{
+    box-shadow: 0px 8px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px ;
+    position: relative;
+    width: calc((100% - 40px) / 2);
+    box-sizing: border-box;
+}
+.testimonial .rating{
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+.personal-data{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.user-info img{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.user-data{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column ;
+    gap: 4px;
+}
+
+.testimonial ::after{
+    content: '';
+    top: 0;
+    right: 0;
+    position: absolute;
+    border-right: 40px solid #F4F4F4;
+    border-left: 40px solid transparent;
+    border-top: 40px solid #F4F4F4;
+    border-bottom: 40px solid transparent;
+
+
+}
+/* medis testimonials*/
+@media  screen and (max-width:576px){
+    .testimonial{
+        width: 100%;
+       
+    }
+   
+}
+
 /* start footer */
 .footer{
     background-color: #393E46;
@@ -169,5 +745,7 @@ body{
     width: 100%;
     text-align: center;
    }
-   
+ 
 }
+/* end media footer*/
+
